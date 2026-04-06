@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 151419834543904543}
   - component: {fileID: 3495457898493523127}
   - component: {fileID: 1315615572754674908}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,6 @@ Tilemap:
     e33: 1
 --- !u!483693784 &1315615572754674908
 TilemapRenderer:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -125,9 +124,6 @@ TilemapRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -149,11 +145,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.5, y: 0.5, z: 0.5}
   m_MaxChunkCount: 16
@@ -161,6 +155,7 @@ TilemapRenderer:
   m_SortOrder: 0
   m_Mode: 0
   m_DetectChunkCullingBounds: 1
+  m_MaskInteraction: 0
 --- !u!1 &2894274484813220296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,6 +1160,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Colliders
       objectReference: {fileID: 0}
+    - target: {fileID: 3443857838792542710, guid: 1871aa1ecfa4f15499b5ed67d0c3bbfc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3615819211654093475, guid: 1871aa1ecfa4f15499b5ed67d0c3bbfc, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.size
       value: 0
@@ -1392,6 +1391,10 @@ PrefabInstance:
     - target: {fileID: 5439877653009092454, guid: 1871aa1ecfa4f15499b5ed67d0c3bbfc, type: 3}
       propertyPath: m_Name
       value: Grid
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439877653009092454, guid: 1871aa1ecfa4f15499b5ed67d0c3bbfc, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
