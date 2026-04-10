@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Remy's Countertop_0: 273626211555190127
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
