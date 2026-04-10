@@ -48,7 +48,7 @@ public class PlayerScript : MonoBehaviour {
     public float jumpMultiplier        { get; set; } = 1f;
     public float knockbackInfluence    { get; set; } = 1f;
     public float scaleMultiplier       { get; set; } = 1f;
-    public int doubleJumps             { get; set; } = 0;
+    public int doubleJumps             { get; set; } = 1;
     private int currentDoubleJumps = 0;
 
     private Dictionary<string, Coroutine> activePowerupExpiries = new Dictionary<string, Coroutine>();
@@ -253,9 +253,14 @@ public class PlayerScript : MonoBehaviour {
         if (isGrounded) currentDoubleJumps = 0;
 
         /////////////// Jump input ///////////////
-        if (Input.GetKey(upKey) && (isGrounded || currentDoubleJumps < doubleJumps) && knockbackTimer <= 0) {
+        if (Input.GetKeyDown(upKey) && (isGrounded || currentDoubleJumps < doubleJumps) && knockbackTimer <= 0) {
             if (!isGrounded) currentDoubleJumps++;
-            rb.velocity = new Vector2(rb.velocityX, jumpForce * jumpMultiplier);
+
+            var force = jumpForce * jumpMultiplier;
+            if (currentDoubleJumps > 0)
+                force *= currentDoubleJumps * 0.5f;
+
+            rb.velocity = new Vector2(rb.velocityX, force);
         }
         
         /////////////// Movement input ///////////////

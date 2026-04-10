@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RealFrenchFriesSprite_0: 6128812328058315467
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

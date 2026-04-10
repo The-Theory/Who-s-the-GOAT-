@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LaysPotatoChips_0: -554430570929703213
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

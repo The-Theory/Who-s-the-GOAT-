@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RealOrangeSprite_0: 4121798926171223902
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

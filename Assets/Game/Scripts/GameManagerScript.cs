@@ -11,7 +11,7 @@ public class GameManagerScript : MonoBehaviour {
     [SerializeField] private GameObject powerupFolder;
 
     // Spawn variables
-    private float powerupInterval = 2f;
+    private float powerupInterval = 12f;
     private float powerupTimer = 0f;
     private Vector2 powerupSpawnRange = new Vector2(13f, 7f);
 

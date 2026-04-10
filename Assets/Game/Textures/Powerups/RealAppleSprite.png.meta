@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RealAppleSprite_0: 8580661966189364627
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
