@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5c256a57a63c31247855209e83225d01
+guid: c44763ceabfa6f54b817d889c2f48e57
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8580661966189364627
-    second: RealAppleSprite_0
+      213: 9039137947753449470
+    second: SMURF_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RealAppleSprite_0
+      name: SMURF_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 16
+        width: 13
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3950c609892a41770800000000000000
-      internalID: 8580661966189364627
+      spriteID: ef709937218717d70800000000000000
+      internalID: 9039137947753449470
       vertices: []
       indices: 
       edges: []
@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SMURF_0: 9039137947753449470
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

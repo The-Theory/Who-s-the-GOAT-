@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 53dc822b7fe7bb349a26ff8f071e8dad
+guid: 3e9a3e5f61e0e3b43ac0e0e4f9f7d524
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -554430570929703213
-    second: LaysPotatoChips_0
+      213: -8960143659409792767
+    second: sweedish meatballs_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LaysPotatoChips_0
+      name: sweedish meatballs_0
       rect:
         serializedVersion: 2
         x: 0
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d63e1f45544e48f0800000000000000
-      internalID: -554430570929703213
+      spriteID: 101296c80dc27a380800000000000000
+      internalID: -8960143659409792767
       vertices: []
       indices: 
       edges: []
@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sweedish meatballs_0: -8960143659409792767
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 555cd22b353177c47977e93d37360989
+guid: 309dec4a869297d42aac248b25164d48
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4121798926171223902
-    second: RealOrangeSprite_0
+      213: 5306695549777337342
+    second: cocoaMetro_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RealOrangeSprite_0
+      name: cocoaMetro_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 16
-        height: 14
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e57b50ef842933930800000000000000
-      internalID: 4121798926171223902
+      spriteID: efbdf978c7b25a940800000000000000
+      internalID: 5306695549777337342
       vertices: []
       indices: 
       edges: []
@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cocoaMetro_0: 5306695549777337342
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

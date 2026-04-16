@@ -20,24 +20,24 @@ public class Powerup {
     private static Dictionary<string, Powerup> RegisterPowerups() {
         var dict = new Dictionary<string, Powerup>();
 
-        dict["Speed"] = new Powerup(
+        dict["Fast"] = new Powerup(
             onCollected: player => player.speedMultiplier = 2f,
             onExpired: player => player.speedMultiplier = 1f
         );
 
         dict["Expand"] = new Powerup(
-            onCollected: player => player.scaleMultiplier = 2f,
-            onExpired: player => player.scaleMultiplier = 1f
+            onCollected: player => player.scaleMultiplier += 1f,
+            onExpired: player => player.scaleMultiplier -= 1f
         );
 
         dict["Shrink"] = new Powerup(
-            onCollected: player => player.scaleMultiplier = 0.5f,
-            onExpired: player => player.scaleMultiplier = 1f
+            onCollected: player => player.scaleMultiplier -= 0.5f,
+            onExpired: player => player.scaleMultiplier += 0.5f
         );
 
         dict["Jump"] = new Powerup(
-            onCollected: player => player.jumpMultiplier = 1.5f,
-            onExpired: player => player.jumpMultiplier = 1f
+            onCollected: player => player.jumpMultiplier += 0.15f,
+            onExpired: player => player.jumpMultiplier = -0.15f
         );
 
         return dict;

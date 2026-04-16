@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 309dec4a869297d42aac248b25164d48
+guid: 53dc822b7fe7bb349a26ff8f071e8dad
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5306695549777337342
-    second: cocoaMetro_0
+      213: -554430570929703213
+    second: LaysPotatoChips_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cocoaMetro_0
+      name: LaysPotatoChips_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 14
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: efbdf978c7b25a940800000000000000
-      internalID: 5306695549777337342
+      spriteID: 3d63e1f45544e48f0800000000000000
+      internalID: -554430570929703213
       vertices: []
       indices: 
       edges: []
@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LaysPotatoChips_0: -554430570929703213
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

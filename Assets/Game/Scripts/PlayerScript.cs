@@ -235,7 +235,7 @@ public class PlayerScript : MonoBehaviour {
             spriteRenderer.flipX = true;
     }
     #endregion
-
+ 
     #region Movement logic
     //##############################################################################
     void MovementInput() {

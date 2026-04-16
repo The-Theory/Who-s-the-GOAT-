@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c44763ceabfa6f54b817d889c2f48e57
+guid: 10de5995ba0d7734d835ae1f7fb6127a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9039137947753449470
-    second: SMURF_0
+      213: -6207193392188836992
+    second: snail_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SMURF_0
+      name: snail_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 13
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef709937218717d70800000000000000
-      internalID: 9039137947753449470
+      spriteID: 083be663f7e9bd9a0800000000000000
+      internalID: -6207193392188836992
       vertices: []
       indices: 
       edges: []
@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      snail_0: -6207193392188836992
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
