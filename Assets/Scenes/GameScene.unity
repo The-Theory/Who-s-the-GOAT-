@@ -487,10 +487,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   powerupSprites:
-  - {fileID: 21300000, guid: c9e72c67eb2db4b42b640b76076f494d, type: 3}
-  - {fileID: 21300000, guid: 103bbd2176bd046b48c4a8ee2f489c77, type: 3}
-  - {fileID: 21300000, guid: ca7771cad435a49fb92b675fed201aab, type: 3}
-  - {fileID: 21300000, guid: f7a161ecb566f4d77b2fd62df9042656, type: 3}
+  - {fileID: 21300000, guid: d78500684fd87f549bf7c17df3692a4c, type: 3}
+  - {fileID: 21300000, guid: 38bf34afc887b704f9904e7a5fc471cf, type: 3}
+  - {fileID: 21300000, guid: 5c256a57a63c31247855209e83225d01, type: 3}
+  - {fileID: 21300000, guid: 34e557e9d1cfb3c49a388709c5411d4c, type: 3}
   powerupPrefab: {fileID: 5344222485165694700, guid: 6e4319fa48c4d4e289af878e1e0f477c, type: 3}
   powerupFolder: {fileID: 359819684}
 --- !u!4 &1971503544
