@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cocoaMetro_0: 5306695549777337342
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

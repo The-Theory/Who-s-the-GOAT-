@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sweedish meatballs_0: -8960143659409792767
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
