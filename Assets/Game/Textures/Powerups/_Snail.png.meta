@@ -131,7 +131,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+<<<<<<< HEAD:Assets/Game/Textures/Powerups/_Snail.png.meta
       snail_0: -6207193392188836992
+=======
+      RealAppleSprite_0: 8580661966189364627
+>>>>>>> e07bd52c8b9ca0d0aa57bc565d0ccf57abdee238:Assets/Game/Textures/Powerups/RealAppleSprite.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

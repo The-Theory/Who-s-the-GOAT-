@@ -131,7 +131,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+<<<<<<< HEAD:Assets/Game/Textures/Tilesets/Floor Textures/Floor Tile.png.meta
       Floor Tile_0: -7106506581416268285
+=======
+      RealFrenchFriesSprite_0: 6128812328058315467
+>>>>>>> e07bd52c8b9ca0d0aa57bc565d0ccf57abdee238:Assets/Game/Textures/Powerups/RealFrenchFriesSprite.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
