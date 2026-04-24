@@ -44,11 +44,11 @@ public class PlayerScript : MonoBehaviour {
     KeyCode upKey, leftKey, rightKey, dashKey;
 
     // Multipliers and boosts
-    public float speedMultiplier       { get; set; } = 1f;
-    public float jumpMultiplier        { get; set; } = 1f;
-    public float knockbackInfluence    { get; set; } = 1f;
-    public float scaleMultiplier       { get; set; } = 1f;
-    public int doubleJumps             { get; set; } = 1;
+    public float speedMultiplier    { get; set; } = 1f;
+    public float jumpMultiplier     { get; set; } = 1f;
+    public float knockbackInfluence { get; set; } = 1f;
+    public float scaleMultiplier    { get; set; } = 1f;
+    public int doubleJumps          { get; set; } = 1;
     private int currentDoubleJumps = 0;
 
     private Dictionary<string, Coroutine> activePowerupExpiries = new Dictionary<string, Coroutine>();
@@ -261,6 +261,7 @@ public class PlayerScript : MonoBehaviour {
                 force *= currentDoubleJumps * 0.5f;
 
             rb.velocity = new Vector2(rb.velocityX, force);
+            Debug.Log(jumpMultiplier);
         }
         
         /////////////// Movement input ///////////////

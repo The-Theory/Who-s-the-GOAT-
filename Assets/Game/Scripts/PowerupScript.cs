@@ -36,8 +36,8 @@ public class Powerup {
         );
 
         dict["Jump"] = new Powerup(
-            onCollected: player => player.jumpMultiplier += 0.15f,
-            onExpired: player => player.jumpMultiplier = -0.15f
+            onCollected: player => player.jumpMultiplier += 0.25f,
+            onExpired: player => player.jumpMultiplier -= -0.25f
         );
 
         return dict;
