@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: be0dc1431ded1ee478f478f1a1c40cc6
+guid: f5eb5be4a4213c44fbfe878b285e4980
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2667613459731077122
-    second: New Project-1.png_0
+      213: -6477323090502953663
+    second: 360_F_1417394519_2Zajj22UnCrgnpiFoklLrkqU51tgpkjV-removebg-preview_0
+  - first:
+      213: 1787775339453067326
+    second: 360_F_1417394519_2Zajj22UnCrgnpiFoklLrkqU51tgpkjV-removebg-preview_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New Project-1.png_0
+      name: 360_F_1417394519_2Zajj22UnCrgnpiFoklLrkqU51tgpkjV-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 384
-        height: 216
+        x: 212
+        y: 344
+        width: 12
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +117,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef7ada621bbbafad0800000000000000
-      internalID: -2667613459731077122
+      spriteID: 145d22fa7fceb16a0800000000000000
+      internalID: -6477323090502953663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 360_F_1417394519_2Zajj22UnCrgnpiFoklLrkqU51tgpkjV-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 355
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e30bd4ef2347fc810800000000000000
+      internalID: 1787775339453067326
       vertices: []
       indices: 
       edges: []
@@ -130,8 +154,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      New Project-1.png_0: -2667613459731077122
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
