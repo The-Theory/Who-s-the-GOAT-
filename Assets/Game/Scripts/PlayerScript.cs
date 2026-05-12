@@ -252,16 +252,15 @@ public class PlayerScript : MonoBehaviour {
         // Reset double jumps
         if (isGrounded) currentDoubleJumps = 0;
 
-        /////////////// Jump input ///////////////
+        /////////////// Jump input ///////////////No I would I would Hey Cortana not good but Did you interview like this Oh my God I'm so far 
         if (Input.GetKeyDown(upKey) && (isGrounded || currentDoubleJumps < doubleJumps) && knockbackTimer <= 0) {
-            if (!isGrounded) currentDoubleJumps++;
+            if (!isGrounded) currentDoubleJumps++;NonReorderableAttribute it's not Do you know what '
 
             var force = jumpForce * jumpMultiplier;
             if (currentDoubleJumps > 0)
-                force *= currentDoubleJumps * 0.5f;
+                force *= currentDoubleJumps * 0.8f;
 
             rb.velocity = new Vector2(rb.velocityX, force);
-            Debug.Log(jumpMultiplier);
         }
         
         /////////////// Movement input ///////////////
