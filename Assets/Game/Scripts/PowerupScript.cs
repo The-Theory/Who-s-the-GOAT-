@@ -10,11 +10,14 @@ public class Powerup {
     public Action<PlayerScript> OnCollected { get; }
     public Action<PlayerScript> OnExpired { get; }
     public float Duration { get; }
+    // Powerups sharing a slot cancel each other's expiry timer on collection
+    public string Slot { get; }
 
-    public Powerup(Action<PlayerScript> onCollected, Action<PlayerScript> onExpired, float duration = 10f) {
+    public Powerup(Action<PlayerScript> onCollected, Action<PlayerScript> onExpired, float duration = 10f, string slot = null) {
         OnCollected = onCollected;
         OnExpired = onExpired;
         Duration = duration;
+        Slot = slot;
     }
 
     private static Dictionary<string, Powerup> RegisterPowerups() {
@@ -27,12 +30,14 @@ public class Powerup {
 
         dict["Expand"] = new Powerup(
             onCollected: player => player.scaleMultiplier = 2f,
-            onExpired: player => player.scaleMultiplier = 1f
+            onExpired: player => player.scaleMultiplier = 1f,
+            slot: "Scale"
         );
 
         dict["Shrink"] = new Powerup(
             onCollected: player => player.scaleMultiplier = 0.5f,
-            onExpired: player => player.scaleMultiplier = 1f
+            onExpired: player => player.scaleMultiplier = 1f,
+            slot: "Scale"
         );
 
         dict["Jump"] = new Powerup(
@@ -63,7 +68,7 @@ public class PowerupScript : MonoBehaviour {
         powerup.OnCollected(player);
 
         if (powerup.Duration > 0f && powerup.OnExpired != null)
-            player.RunPowerupExpiry(powerupType, powerup.Duration, powerup.OnExpired);
+            player.RunPowerupExpiry(powerup.Slot ?? powerupType, powerup.Duration, powerup.OnExpired);
 
         DestroyPowerup();
     }

@@ -56,6 +56,7 @@ public class PlayerScript : MonoBehaviour {
     // State variables
     private bool isGrounded;
     private float inputX = 0f;
+    private GameManagerScript gameManager;
     #endregion
 
     #region Start logic
@@ -70,6 +71,7 @@ public class PlayerScript : MonoBehaviour {
         
         // Set start position
         startPosition = transform.position;
+        gameManager = Object.FindFirstObjectByType<GameManagerScript>();
 
         // Set keys based on input type
         if (inputType == InputType.WASD) {
@@ -104,7 +106,10 @@ public class PlayerScript : MonoBehaviour {
         rb.mass = scaleMultiplier * 10f;
 
         // Reset player if below -11.5f
-        if (transform.position.y < -11.5f) transform.position = startPosition;
+        if (transform.position.y < -11.5f) {
+            transform.position = startPosition;
+            gameManager?.OnPlayerDied(this);
+        }
         
         // Update dash, movement, and animation
         DashInput();
