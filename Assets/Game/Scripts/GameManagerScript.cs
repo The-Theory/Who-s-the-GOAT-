@@ -12,6 +12,8 @@ public class GameManagerScript : MonoBehaviour {
 
     // Level management
     [SerializeField] private GameObject[] levelPrefabs;
+    [SerializeField] private Sprite[] levelBackgrounds;
+    [SerializeField] private SpriteRenderer backgroundRenderer;
     [SerializeField] private GameObject currentLevelInstance;
     private int currentLevelIndex = 0;
     private bool isSwapping = false;
@@ -19,7 +21,7 @@ public class GameManagerScript : MonoBehaviour {
     // Scoring
     private int[] scores = new int[2]; // 0 = Player1 (WASD), 1 = Player2 (Arrows)
     private PlayerScript[] players;
-    private const int score_to_win = 10;
+    private const int score_to_win = 3;
 
     // UI
     [SerializeField] private TMPro.TextMeshProUGUI scoreText;
@@ -36,6 +38,7 @@ public class GameManagerScript : MonoBehaviour {
     ////////////////////////////////////////////////////////////////////////////////
     private void Start() {
         CachePlayersFromLevel(currentLevelInstance);
+        ApplyBackground(currentLevelIndex);
         UpdateScoreUI();
     }
 
@@ -108,15 +111,21 @@ public class GameManagerScript : MonoBehaviour {
         while (newIndex == currentLevelIndex)
             newIndex = Random.Range(0, levelPrefabs.Length);
 
-        Destroy(currentLevelInstance);
+        DestroyImmediate(currentLevelInstance);
         currentLevelInstance = Instantiate(levelPrefabs[newIndex]);
         currentLevelIndex = newIndex;
 
         scores[0] = scores[1] = 0;
         UpdateScoreUI();
         CachePlayersFromLevel(currentLevelInstance);
+        ApplyBackground(currentLevelIndex);
 
         isSwapping = false;
+    }
+
+    private void ApplyBackground(int index) {
+        if (backgroundRenderer == null || levelBackgrounds == null || index >= levelBackgrounds.Length) return;
+        backgroundRenderer.sprite = levelBackgrounds[index];
     }
 
 
