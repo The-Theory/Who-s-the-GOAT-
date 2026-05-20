@@ -71,7 +71,7 @@ public class PlayerScript : MonoBehaviour {
         
         // Set start position
         startPosition = transform.position;
-        gameManager = Object.FindFirstObjectByType<GameManagerScript>();
+        gameManager = UnityEngine.Object.FindFirstObjectByType<GameManagerScript>();
 
         // Set keys based on input type
         if (inputType == InputType.WASD) {
