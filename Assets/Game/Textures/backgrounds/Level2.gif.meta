@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5c256a57a63c31247855209e83225d01
+guid: 17e73cd480bff442bb0d88dd4452d0e3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8580661966189364627
-    second: RealAppleSprite_0
+      213: 3394538558591641197
+    second: asd_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,22 +100,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RealAppleSprite_0
+      name: Level2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 828
+        height: 358
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3950c609892a41770800000000000000
-      internalID: 8580661966189364627
+      spriteID: d66a83185d2db1f20800000000000000
+      internalID: 3394538558591641197
       vertices: []
       indices: 
       edges: []
@@ -123,7 +123,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8a6cd96670d0d41e184561bcf0abb325
     internalID: 0
     vertices: []
     indices: 
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RealAppleSprite_0: 8580661966189364627
+      Level2: 3394538558591641197
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
