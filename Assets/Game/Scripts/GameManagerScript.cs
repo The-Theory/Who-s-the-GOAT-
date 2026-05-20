@@ -1,5 +1,8 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class GameManagerScript : MonoBehaviour {
     ////////////////////////////////////////////////////////////////////////////////
@@ -14,7 +17,7 @@ public class GameManagerScript : MonoBehaviour {
     [SerializeField] private GameObject[] levelPrefabs;
     [SerializeField] private Sprite[] levelBackgrounds;
     [SerializeField] private SpriteRenderer backgroundRenderer;
-    [SerializeField] private GameObject currentLevelInstance;
+    private GameObject currentLevelInstance;
     private int currentLevelIndex = 0;
     private bool isSwapping = false;
 
@@ -24,7 +27,8 @@ public class GameManagerScript : MonoBehaviour {
     private const int score_to_win = 3;
 
     // UI
-    [SerializeField] private TMPro.TextMeshProUGUI scoreText;
+    [SerializeField] private TMP_FontAsset pixelFont;
+    private TextMeshProUGUI scoreText;
 
     // Spawn variables
     private float powerupInterval = 12f;
@@ -36,10 +40,48 @@ public class GameManagerScript : MonoBehaviour {
     ////////////////////////////////////////////////////////////////////////////////
     /// Start
     ////////////////////////////////////////////////////////////////////////////////
-    private void Start() {
+    private IEnumerator Start() {
+        BuildScoreUI();
+        currentLevelInstance = Instantiate(levelPrefabs[currentLevelIndex]);
         CachePlayersFromLevel(currentLevelInstance);
         ApplyBackground(currentLevelIndex);
+        yield return null;
         UpdateScoreUI();
+    }
+
+    private void BuildScoreUI() {
+        var canvasGO = new GameObject("ScoreCanvas");
+        var canvas = canvasGO.AddComponent<Canvas>();
+        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        canvas.sortingOrder = 10;
+
+        var scaler = canvasGO.AddComponent<CanvasScaler>();
+        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        scaler.referenceResolution = new Vector2(1920, 1080);
+        scaler.matchWidthOrHeight = 0.5f;
+
+        canvasGO.AddComponent<GraphicRaycaster>();
+
+        var textGO = new GameObject("ScoreText");
+        textGO.transform.SetParent(canvasGO.transform, false);
+
+        scoreText = textGO.AddComponent<TextMeshProUGUI>();
+
+        var fallbackFont = Resources.Load<TMP_FontAsset>("Fonts & Materials/LiberationSans SDF");
+        scoreText.font = pixelFont != null ? pixelFont : fallbackFont;
+
+        scoreText.fontSize = 72;
+        scoreText.fontStyle = FontStyles.Bold;
+        scoreText.alignment = TextAlignmentOptions.Top;
+        scoreText.color = Color.white;
+        scoreText.richText = true;
+
+        var rect = textGO.GetComponent<RectTransform>();
+        rect.anchorMin = new Vector2(0f, 1f);
+        rect.anchorMax = new Vector2(1f, 1f);
+        rect.pivot = new Vector2(0.5f, 1f);
+        rect.sizeDelta = new Vector2(0f, 80f);
+        rect.anchoredPosition = new Vector2(0f, -20f);
     }
 
 
@@ -75,9 +117,20 @@ public class GameManagerScript : MonoBehaviour {
     private int GetOpponentIndex(PlayerScript dead) => (dead == players[0]) ? 1 : 0;
 
     private void UpdateScoreUI() {
-        if (scoreText != null)
-            scoreText.text = $"{scores[0]}  —  {scores[1]}";
+        if (scoreText == null) return;
+        string c0 = players != null ? GoatHex(players[0].GoatColor) : "#FFFFFF";
+        string c1 = players != null ? GoatHex(players[1].GoatColor) : "#FFFFFF";
+        scoreText.text = $"<color={c1}>{scores[0]}</color>  —  <color={c0}>{scores[1]}</color>";
     }
+
+    private string GoatHex(string color) => color switch {
+        "Black"  => "#A8B4C0",
+        "Brown"  => "#D4A882",
+        "Gold"   => "#F5E09A",
+        "Red"    => "#F0A8A8",
+        "White"  => "#E8E0F5",
+        _        => "#FFFFFF"
+    };
 
 
 
@@ -100,7 +153,10 @@ public class GameManagerScript : MonoBehaviour {
         }
 
         isSwapping = true;
+        StartCoroutine(SwapLevelRoutine());
+    }
 
+    private IEnumerator SwapLevelRoutine() {
         // Clear powerups
         foreach (Transform child in powerupFolder.transform)
             Destroy(child.gameObject);
@@ -111,15 +167,18 @@ public class GameManagerScript : MonoBehaviour {
         while (newIndex == currentLevelIndex)
             newIndex = Random.Range(0, levelPrefabs.Length);
 
+        currentLevelInstance.SetActive(false);
         DestroyImmediate(currentLevelInstance);
         currentLevelInstance = Instantiate(levelPrefabs[newIndex]);
         currentLevelIndex = newIndex;
 
         scores[0] = scores[1] = 0;
-        UpdateScoreUI();
         CachePlayersFromLevel(currentLevelInstance);
         ApplyBackground(currentLevelIndex);
 
+        yield return null; // wait for new players' Start() so animator is ready
+
+        UpdateScoreUI();
         isSwapping = false;
     }
 

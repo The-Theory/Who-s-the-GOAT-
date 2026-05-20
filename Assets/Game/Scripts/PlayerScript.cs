@@ -109,6 +109,7 @@ public class PlayerScript : MonoBehaviour {
         if (transform.position.y < -11.5f) {
             transform.position = startPosition;
             gameManager?.OnPlayerDied(this);
+            return;
         }
         
         // Update dash, movement, and animation
@@ -224,6 +225,7 @@ public class PlayerScript : MonoBehaviour {
     #region Animation logic
     //##############################################################################
     void SetAnimationController(string color) => animator.runtimeAnimatorController = animations[color];
+    public string GoatColor => animator?.runtimeAnimatorController?.name.Replace("GoatAnimator", "") ?? "White";
     void UpdateAnimation() {
         float inputSpeed = 0f;
         if (Input.GetKey(leftKey) || Input.GetKey(rightKey)) {
@@ -257,9 +259,9 @@ public class PlayerScript : MonoBehaviour {
         // Reset double jumps
         if (isGrounded) currentDoubleJumps = 0;
 
-        /////////////// Jump input ///////////////No I would I would Hey Cortana not good but Did you interview like this Oh my God I'm so far 
+        /////////////// Jump input ///////////////
         if (Input.GetKeyDown(upKey) && (isGrounded || currentDoubleJumps < doubleJumps) && knockbackTimer <= 0) {
-            if (!isGrounded) currentDoubleJumps++;NonReorderableAttribute it's not Do you know what '
+            if (!isGrounded) currentDoubleJumps++;
 
             var force = jumpForce * jumpMultiplier;
             if (currentDoubleJumps > 0)
